@@ -20,4 +20,17 @@ def search(request):
     #response = requests.get("https://api.nasa.gov/planetary/earth/imagery/?lon=100.75&lat=1.5&date=2014-02-01&cloud_score=True&api_key=N3oZKz7mpvVKaUPnJ617Ov3cAeet9JurXRF5pqcx")
     response = requests.get(link+lon+lat+date+cloud+api_key)
     data = response.json()
-    return render (request, 'pictures/search.html', {'picture' : data['url'], 'longitude': longitude, 'latitude' : latitude, 'date': date})
+    if  request.method == 'POST':
+        try:
+            return render (request, 'pictures/search.html', {'picture' : data['url'], 'longitude': longitude, 'latitude' : latitude, 'date': date})
+        except:
+            return render(request, 'pictures/home.html', {'error': 'You need to specify both latitude and longitude'})
+        
+        
+    
+
+     
+      #  return render(request, 'pictures/search.html', {'error': 'xxxxxxxx'})
+   
+     
+       # return render(request, 'pictures/home.html', {'error': 'You need to specify both latitude and longitude'})

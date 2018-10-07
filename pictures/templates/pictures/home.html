@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 {%block content%}
-{% load static %}
+{% load staticfiles%}
 <body>
+
+    {% if error %}
+    {{error}}
+    <br />
+    <br />
+    {% endif %}
+
     <form method="POST" action="{% url 'search'%}" />
     {% csrf_token %}
     Longitude:
