@@ -1,26 +1,30 @@
 {% extends 'base.html' %}
 {%block content%}
-
-<form method="POST" action="{% url 'search'%}" />
+{% load static %}
+<body>
+    <form method="POST" action="{% url 'search'%}" />
     {% csrf_token %}
     Longitude:
-<br />
-<input type="text" name="longitude" />
-<br />
+    <br />
+    <input type="text" name="longitude" />
+    <br />
     Latitude:
-<br />
-<input type="text" name="latitude" />
+    <br />
+    <input type="text" name="latitude" />
 
-<br />
-Date:
-<br />
-<input type="text" placeholder="YYYY-MM-DD" name="search_date" />
-<br />
+    <br />
+    Date:
+    <br />
+    <input type="text" placeholder="YYYY-MM-DD" name="search_date" />
+    <br />
 
-<br />
+    <br />
 
 
-<input class="btn btn-primary" type="submit" value="SEARCH" />
-<br />
+    <input class="btn btn-primary" type="submit" value="SEARCH" />
+    <br />
+</body>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
 
     {%endblock%}
