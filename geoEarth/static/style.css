@@ -1,3 +1,38 @@
-body{
-    background-color: yellow;
+body {
+    text-align: center;
+    background-color: #b6d6ed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#introduction {
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 10%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }

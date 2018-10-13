@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\geoEarth",
+    "\\geoEarth\\static",
+    "\\geoEarth\\templates",
+    "\\pictures",
+    "\\pictures\\migrations",
+    "\\pictures\\templates",
+    "\\pictures\\templates\\pictures"
+  ],
+  "SelectedNode": "\\pictures\\views.py",
+  "PreviewInSolutionExplorer": false
+}
